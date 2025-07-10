@@ -184,6 +184,9 @@ class QuantumFieldTheoryAnimation(ThreeDScene):
         self.play(FadeIn(axes), FadeIn(lagrangian), FadeIn(feynman), FadeIn(summary), run_time=3)
 
         # Zoom out and return to star field
+        stars = VGroup(*[Dot(radius=0.05, color=WHITE).move_to(np.random.uniform(-7, 7, size=3))
+                         for _ in range(200)])
+        self.add(stars)
         self.move_camera(zoom=2, run_time=3)
         self.play(FadeOut(axes, lagrangian, feynman, summary), run_time=3)
 
