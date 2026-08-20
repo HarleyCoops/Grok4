@@ -24,7 +24,7 @@ client = OpenAI(
   base_url="https://api.x.ai/v1",
 )
 
-# Create the prompt for Grok4 to convert the content to Manim code
+# Create the prompt for grok-4.6 to convert the content to Manim code
 prompt = f"""Please convert the following animation description into a complete, fully rendered Manim Community v.19 Python code. 
 
 The description is for a Quantum Field Theory animation with multiple scenes. Please create a complete, runnable Manim script that includes:
@@ -44,7 +44,7 @@ Here's the animation description:
 Please provide the complete Python code that can be run directly with Manim Community v.19. Make sure to include all necessary imports and create a complete, self-contained script."""
 
 completion = client.chat.completions.create(
-  model="grok-3",
+  model="grok-4.6",
   messages=[
     {"role": "user", "content": prompt}
   ],
