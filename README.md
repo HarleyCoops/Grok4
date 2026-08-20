@@ -1,17 +1,17 @@
 
 # Grok4 Animation Generator
 
-Welcome to the Grok4 Animation Generator project. This tool leverages the power of AI, specifically Grok4 to transform text descriptions of complex mathematical and physical concepts into fully rendered animations using the Manim library.
+Welcome to the Grok4 Animation Generator project. This tool leverages the power of AI, specifically `grok-4.6` to transform text descriptions of complex mathematical and physical concepts into fully rendered animations using the Manim library.
 
 ## Overview
 
-This project automates the creation of educational animations for topics in mathematics and physics, with a focus on Quantum Field Theory as an example. By inputting detailed text descriptions, Grok4 interprets these narratives and generates corresponding Manim scripts, which are then rendered into high-quality video animations.
+This project automates the creation of educational animations for topics in mathematics and physics, with a focus on Quantum Field Theory as an example. By inputting detailed text descriptions, `grok-4.6` interprets these narratives and generates corresponding Manim scripts, which are then rendered into high-quality video animations.
 
 ## How It Works
 
 1. **Text Description Input**: The process begins with a detailed text description of the desired animation, stored in `universe.txt`. This file contains the narrative and visual elements for the animation, such as scenes, transitions, and mathematical equations.
 
-2. **Grok4 Interpretation**: Using the script `grok4call.py`, the text from `universe.txt` is fed to the Grok-4 model The generated script is saved as `manim_quantum_field_theory.py`.
+2. **grok-4.6 Interpretation**: Using the script `grok4call.py`, the text from `universe.txt` is fed to the `grok-4.6` model. The generated script is saved as `manim_quantum_field_theory.py`.
 
 3. **Manim Script Execution**: The generated Manim script (e.g., `quantum_field_theory_clean.py`) is a Python file that uses the Manim Community library (version 0.19 or compatible). When executed, it renders the animation scenes, including 3D elements, equations in LaTeX, camera movements, and visual effects as specified. The output is a series of video files stored in the `media/videos/` directory.
 
@@ -19,9 +19,9 @@ This project automates the creation of educational animations for topics in math
 
 ## Project Structure
 
-- **`grok4call.py`**: Script to interface with Grok4 via the OpenAI API, converting text descriptions to Manim code.
+- **`grok4call.py`**: Script to interface with `grok-4.6` via the OpenAI-compatible xAI API, converting text descriptions to Manim code.
 - **`universe.txt`**: Input file containing the text description of the animation.
-- **`manim_quantum_field_theory.py`**: Generated Manim script from Grok4.
+- **`manim_quantum_field_theory.py`**: Generated Manim script from `grok-4.6`.
 - **`quantum_field_theory_clean.py`**: A refined or final version of the Manim script for Quantum Field Theory animation.
 - **`media/videos/`**: Directory containing rendered animation video files.
 - **`requirements.txt`**: Lists Python dependencies for the project (Note: Manim may need to be installed separately).
@@ -34,7 +34,7 @@ This project automates the creation of educational animations for topics in math
    ```
    Note: The Manim library is not listed in `requirements.txt` and must be installed separately if not already present. Follow the [Manim installation guide](https://docs.manim.community/en/stable/installation.html) for version 0.19 or compatible.
 
-2. **API Key Configuration**: Set up your API key for accessing Grok4 in a `.env` file or environment variable as `XAI_API_KEY`.
+2. **API Key Configuration**: Set up your API key for accessing `grok-4.6` in a `.env` file or environment variable as `XAI_API_KEY`. See the [grok-4.6 model docs](https://docs.x.ai/developers/models/grok-4.6).
 
 3. **Prepare Text Description**: Edit `universe.txt` with your animation description, detailing scenes, visual elements, and mathematical concepts.
 
@@ -52,7 +52,7 @@ This project automates the creation of educational animations for topics in math
 ## Additional Notes
 
 - Ensure you have the necessary computational resources for rendering animations, as Manim can be resource-intensive for complex scenes.
-- The project includes demo scripts like `demo_basic_chat.py`, `demo_data_analysis_agent.py`, and `demo_web_research_agent.py` which may provide additional context or examples of Grok4's capabilities.
+- The project includes demo scripts like `demo_basic_chat.py`, `demo_data_analysis_agent.py`, and `demo_web_research_agent.py` which may provide additional context or examples of `grok-4.6`'s capabilities.
 
 ## Contributing
 
