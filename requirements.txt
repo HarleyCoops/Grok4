@@ -1,7 +1,7 @@
-openai>=3.37.0
+openai>=3.42.0
 python-dotenv>=1.2.4
 requests>=2.34.2
-pydantic>=2.14.1
+pydantic>=2.14.2
 pandas>=3.1.0
 numpy>=2.5.4
 beautifulsoup4>=4.15.0
